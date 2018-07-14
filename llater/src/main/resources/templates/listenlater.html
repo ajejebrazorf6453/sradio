@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>SRadio - self pieced your radio!</title>
+</head>
+<body>
+
+<form action="add">
+	<input type="text" name="url" />
+	<input type="submit" />
+</form>
+
+<table>
+	<tr th:remove="all"><td>http://radioquesta/bhooo</td></tr>
+	<tr th:remove="all"><td>http://radioquella/bhooo</td></tr>
+	<tr th:each="ra : ${recentlyAdded}"><td th:text="${ra.getUrl()}">http://radioquella/bhooo</td></tr>
+</table>
+
+</body>
+</html>
